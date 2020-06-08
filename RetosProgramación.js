@@ -73,3 +73,77 @@ var ePasada = edad - 1;
 var efutura = parseInt(edad) + parseInt(1);
 
 alert(nombre + ' el año pasado tenias ' + ePasada+ ' años y el año proximo tendras ' + efutura +' años' )
+
+//Reto #8 “Divide la cuenta”
+var personas = prompt('Insertar cantidad de personas: ');
+var totalPago = prompt('Total de factura sin impuesto: ');
+const porcientoPropina = 0.10;
+const procientoImpuesto = 0.18;
+var totalFactura;
+var division;
+
+totalFactura = parseFloat(porcientoPropina) + parseFloat(procientoImpuesto);
+totalFactura = totalFactura * totalPago;
+totalFactura = totalFactura + totalFactura;
+division = totalFactura / personas;
+
+alert('Cada persona debe pagar RD$'+division);
+
+
+//Reto #9 “Calculando días”
+var dias = prompt('Insertar dia/s a calcular');
+
+functioncantidadHoras(horas)
+{
+   horas = horas * 24;
+   returnconsole.log(horas +' horas');
+}
+
+functioncantidadMinutos(minutos)
+{
+   minutos = minutos * 1440;
+   returnconsole.log(minutos +' minutos');
+}
+
+functioncantidadSegundos(segundos)
+{
+   segundos = segundos * 3600;
+   returnconsole.log(segundos +' segundos');
+}
+
+var total1 = cantidadHoras(dias);
+var total2 = cantidadMinutos(dias);
+var total3 = cantidadSegundos(dias);
+
+//Reto #10 “Conversor de millas”
+var millas = prompt('Insertar la cantidad de millas a convertir: ' );
+
+var kilometros = millas * 1.609344
+
+alert('En '+ millas +' millas' + ' hay ' + kilometros +' kilometros');
+
+//Reto #11 “Cuantas veces un número en otro”
+
+valor1 = prompt('Inserta un valor mayor a 1000');
+valor1 = parseInt(valor1);
+var valor2 = prompt('inserta un valor menor a 100');
+valor2 = parseInt(valor2);
+var total;
+
+
+while(valor1 < 1000 && valor2 > 100)
+{
+   if(valor1 < 1000)
+   {
+   valor1 = prompt('Inserta un valor mayor a 1000');
+   }
+   elseif (valor2 > 100)
+   {
+   valor2 = prompt('inserta un valor menor a 100');
+   }
+} 
+
+total = valor1 / valor2;
+total = total.toFixed(); 
+
+alert(valor1 +' cabe ' +total +' de veces en '+valor2);
